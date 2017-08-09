@@ -1,30 +1,51 @@
-ul.thumbnails.image_picker_selector {
+div.thumbnails.image_picker_selector {
   overflow: auto;
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
   padding: 0px;
-  margin: 0px; }
-  ul.thumbnails.image_picker_selector ul {
-    overflow: auto;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px; }
-  ul.thumbnails.image_picker_selector li.group {width:100%;} 
-  ul.thumbnails.image_picker_selector li.group_title {
-    float: none; }
-  ul.thumbnails.image_picker_selector li {
-    margin: 0px 12px 12px 0px;
-    float: left; }
-    ul.thumbnails.image_picker_selector li .thumbnail {
-      padding: 6px;
-      border: 1px solid #dddddd;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none; }
-      ul.thumbnails.image_picker_selector li .thumbnail img {
-        -webkit-user-drag: none; }
-    ul.thumbnails.image_picker_selector li .thumbnail.selected {
-      background: #0088cc; }
+  margin: 0px;
+}
+
+div.thumbnails.image_picker_selector div {
+  overflow: auto;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+div.thumbnails.image_picker_selector div .thumbnail {
+  padding: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.thumbnails.image_picker_selector div .thumbnail img {
+  border: 5px solid #fff;
+  -webkit-user-drag: none;
+  transition: 0.2s linear all;
+}
+
+div.thumbnails.image_picker_selector div .thumbnail:hover img {
+  border: 5px solid #ccc;
+}
+
+div.thumbnails.image_picker_selector div .thumbnail.selected img {
+  border: 5px solid #00BCD4;
+  transition: 0.2s linear all;
+}
+
+.thumbnail-caption {
+  margin-top: 8px!important;
+  text-align: center;
+  display: block;
+  min-height: 50px;
+}
+
+div.thumbnails.image_picker_selector div .thumbnail.selected .thumbnail-caption {
+  color: #00808e;
+}
