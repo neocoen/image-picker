@@ -279,14 +279,18 @@
     };
 
     ImagePickerOption.prototype.create_node = function() {
-      var image, imgAlt, imgClass, thumbnail;
-      this.node = jQuery("<div class='col-sm-2'/>");
+      var image, imgAlt, imgClass, divClass, thumbnail;
+      this.node = jQuery("<div/>");
       image = jQuery("<img class='image_picker_image'/>");
       image.attr("src", this.option.data("img-src"));
       thumbnail = jQuery("<div class='thumbnail'>");
       imgClass = this.option.data("img-class");
+      divClass = this.option.data("div-class");
       if (imgClass) {
         image.addClass(imgClass);
+      }
+      if (divClass) {
+        this.node.addClass(divClass);
       }
       imgAlt = this.option.data("img-alt");
       if (imgAlt) {
